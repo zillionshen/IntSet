@@ -5,10 +5,10 @@ Fast integer hash set/map
 It has striking performance in terms of insert/lookup speed and memory consumption.
 
 Here are some of the design principles:
-? No hash functions are used and keys are mapped to the slots by the prime number bucket size 
-? Integer keys are stored in slots directly without any memory overhead (and two specialized values are used to indicate the empty and deleted slots)
-? Buckets are allocated as less as possible to keep the memory overhead in minimum
-? Open addressing strategy is used to resolve the collision
+* No hash functions are used and keys are mapped to the slots by the prime number bucket size 
+* Integer keys are stored in slots directly without any memory overhead (and two specialized values are used to indicate the empty and deleted slots)
+* Buckets are allocated as less as possible to keep the memory overhead in minimum
+* Open addressing strategy is used to resolve the collision
 
 Below is chart of the performance comparing to some other libraries:
 
@@ -23,3 +23,9 @@ google dense set: insert: 67.333 seconds, lookup: 15.454 seconds, memory used: 1
 STL unordered_set: insert: 267.922 seconds, lookup: 43.252 seconds, memory used: 836 MB
 
 STL set: insert: 324.055 seconds, lookup: 162.29 seconds, memory used: 783 MB
+
+
+TODO:
+* IntMap
+* more performance turning
+* Linux compiler support
